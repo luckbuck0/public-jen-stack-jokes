@@ -1,5 +1,8 @@
 ## Node Express jQuery Code Challenge
 
+To Install after cloning, run `npm install`
+
+
 ### Objectives
 - Send requests to the server from client using an AJAX request(s),
 - Display response on the DOM,
