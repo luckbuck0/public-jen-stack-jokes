@@ -1,11 +1,19 @@
+// bringing in express
 const express = require( 'express' );
+// initiating express
 const app = express();
+// initiating body parser
 const bodyParser = require( 'body-parser' );
+
+// port used
 const PORT = 5000;
 
 
 // use bodyParser.urlencoded throughout the app with this:
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// A array with objects called jokes that has 
+//the properties of the jokes
 
 let jokes = [
   {
@@ -50,9 +58,11 @@ app.get('/jokes', (req, res) => {
   res.send(jokes);
 })
 
+// used to get data from client side
 app.post('/newJokes', (req, res) => {
-
+// taking in the data and putting it in variable
   let newJokes= req.body;
+  // pushing new data to jokes array
   jokes.push(newJokes)
   res.sendStatus(201)
 })
